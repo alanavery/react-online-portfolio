@@ -1,7 +1,7 @@
 function Thumbnail(props) {
   return (
-    <div>
-      <h2>{props.name}</h2>
+    <div className="div-thumbnail">
+      <h1 className="project-name">{props.name}</h1>
       <img className="img-thumbnail" src={props.img}></img>
     </div>
   );

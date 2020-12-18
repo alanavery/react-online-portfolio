@@ -1,54 +1,99 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Zilla+Slab:wght@400;600&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  padding: 3%;
+  font-family: 'Zilla Slab', serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  padding-bottom: 2%;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.title {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 50px;
+  letter-spacing: 0.04em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.icon-nav-expand {
+  display: none;
 }
 
 nav li {
-  padding: 0 20px;
-  display: inline;
+  margin-left: 30px;
+  border-bottom: solid 1px rgba(0, 0, 0, 0);
+  display: inline-block;
+  font-size: 20px;
+  transition-property: border-bottom;
+  transition-duration: 0.2s;
+}
+
+nav li:hover {
+  border-bottom: solid 1px rgba(0, 0, 0, 1);
 }
 
 .div-thumbnail-grid {
-  padding: 0 50px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.div-thumbnail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.project-name {
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 70px;
+  letter-spacing: 0.04em;
+  transition-property: opacity;
+  transition-duration: 0.2s;
+}
+
+.div-thumbnail:hover > .project-name {
+  opacity: 1;
 }
 
 .img-thumbnail {
   width: 100%;
+  transition-property: opacity;
+  transition-duration: 0.2s;
+}
+
+.div-thumbnail:hover > .img-thumbnail {
+  opacity: 0.4;
+}
+
+@media screen and (max-width: 640px) {
+  .icon-nav-expand {
+    display: inline-block;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .div-thumbnail-grid {
+    grid-template-columns: 1fr;
+  }
 }

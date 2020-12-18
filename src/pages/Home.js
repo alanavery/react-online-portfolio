@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import Thumbnail from './Thumbnail';
+import Thumbnail from '../components/Thumbnail';
 
 function Home(props) {
   const project = props.work.map((project) => {
