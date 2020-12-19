@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Zilla+Slab:wght@400;600&display=swap');
 
 * {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
 body {
-  padding: 3%;
   font-family: 'Zilla Slab', serif;
 }
 
@@ -16,24 +16,31 @@ a {
   cursor: pointer;
 }
 
+.div-container {
+  padding: 50px 4%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 1fr;
+}
+
 header {
-  padding-bottom: 2%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .title {
+  z-index: 3;
   font-family: 'Bebas Neue', cursive;
   font-size: 50px;
   letter-spacing: 0.04em;
 }
 
-.icon-nav-expand {
+.icon-nav-show {
   display: none;
 }
 
-nav li {
+.nav-desktop li {
   margin-left: 30px;
   border-bottom: solid 1px rgba(0, 0, 0, 0);
   display: inline-block;
@@ -42,8 +49,40 @@ nav li {
   transition-duration: 0.2s;
 }
 
-nav li:hover {
+.nav-desktop li:hover {
   border-bottom: solid 1px rgba(0, 0, 0, 1);
+}
+
+.nav-mobile {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 5%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 1fr 50px;
+  justify-items: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.nav-mobile li {
+  text-align: center;
+  list-style-type: none;
+}
+
+.nav-mobile a {
+  font-size: 50px;
+  line-height: 2em;
+}
+
+.icon-nav-hide {
+  justify-self: end;
+  align-self: start;
+  cursor: pointer;
 }
 
 .div-thumbnail-grid {
@@ -85,15 +124,34 @@ nav li:hover {
 }
 
 @media screen and (max-width: 640px) {
-  .icon-nav-expand {
+  .icon-nav-show {
     display: inline-block;
+    cursor: pointer;
   }
 
-  nav {
+  .nav-desktop {
     display: none;
   }
 
   .div-thumbnail-grid {
     grid-template-columns: 1fr;
+  }
+
+  .fade-enter {
+    opacity: 0;
+  }
+
+  .fade-enter-active {
+    opacity: 1;
+    transition: opacity 300ms;
+  }
+
+  .fade-exit {
+    opacity: 1;
+  }
+
+  .fade-exit-active {
+    opacity: 0;
+    transition: opacity 300ms;
   }
 }

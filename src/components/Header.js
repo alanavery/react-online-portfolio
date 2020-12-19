@@ -1,15 +1,47 @@
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { CSSTransition } from 'react-transition-group';
 
-import iconNavExpand from '../img/icon-nav-expand.png';
+import NavMobile from './NavMobile';
 
-function Header() {
+import iconNavShow from '../img/icon-nav-show.png';
+
+const Header = () => {
+  const [navMobile, setNavMobile] = useState(false);
+  const [clickedHideNav, setClickedHideNav] = useState(false);
+
+  const nodeRef = React.useRef(null);
+
+  const toggleNavMobile = () => {
+    if (!navMobile) {
+      setClickedHideNav(false);
+      setNavMobile(true);
+      document.body.style.overflow = 'hidden';
+    } else {
+      setNavMobile(false);
+      document.body.style.overflow = null;
+    }
+  };
+
+  const handleHideNav = () => {
+    setClickedHideNav(true);
+    toggleNavMobile();
+  };
+
   return (
     <header>
       <p className="title">
-        <Link to="/">Alan Avery</Link>
+        <Link to="/" onClick={toggleNavMobile}>
+          Alan Avery
+        </Link>
       </p>
-      <img className="icon-nav-expand" src={iconNavExpand} alt="" />
-      <nav>
+      <img
+        className="icon-nav-show"
+        src={iconNavShow}
+        alt="Show navigation"
+        onClick={toggleNavMobile}
+      />
+      <nav className="nav-desktop">
         <ul>
           <li>
             <Link to="/">Work</Link>
@@ -19,8 +51,23 @@ function Header() {
           </li>
         </ul>
       </nav>
+
+      <CSSTransition
+        in={navMobile}
+        timeout={300}
+        classNames="fade"
+        unmountOnExit
+        exit={clickedHideNav ? true : false}
+        nodeRef={nodeRef}
+      >
+        <NavMobile
+          toggleNavMobile={toggleNavMobile}
+          handleHideNav={handleHideNav}
+          nodeRef={nodeRef}
+        />
+      </CSSTransition>
     </header>
   );
-}
+};
 
 export default Header;

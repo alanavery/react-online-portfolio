@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 import Thumbnail from '../components/Thumbnail';
 
 function Home(props) {
