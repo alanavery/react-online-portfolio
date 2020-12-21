@@ -21,21 +21,36 @@ a {
   line-height: 1.6em;
 }
 
-.div-container {
-  padding: 4%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 100px 1fr;
+.capsizedText {
+  font-size: 50px;
+  line-height: 35px;
+  padding: 0.05px 0;
 }
 
+.capsizedText::before {
+  content: '';
+  margin-top: 0.049em;
+  display: block;
+  height: 0;
+}
+
+.capsizedText::after {
+  content: '';
+  margin-bottom: -0.051em;
+  display: block;
+  height: 0;
+}
+
+/* Header —————————————————————————————— */
+
 header {
+  padding: 4vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .title {
-  z-index: 3;
   font-family: 'Bebas Neue', cursive;
   font-size: 50px;
   letter-spacing: 0.04em;
@@ -58,38 +73,10 @@ header {
   border-bottom: solid 1px rgba(0, 0, 0, 1);
 }
 
-.nav-mobile {
-  position: fixed;
-  z-index: 2;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 4%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 100px 1fr 100px;
-  justify-items: center;
-  align-items: center;
-  background-color: #fff;
-}
-
-.nav-mobile li {
-  text-align: center;
-  list-style-type: none;
-}
-
-.nav-mobile a {
-  font-size: 50px;
-  line-height: 2em;
-}
-
-.icon-nav-hide {
-  justify-self: end;
-  cursor: pointer;
-}
+/* Home/Work —————————————————————————————— */
 
 .div-thumbnail-grid {
+  padding: 0 4vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
@@ -132,6 +119,8 @@ header {
 .div-project-page {
   position: absolute;
   top: 0;
+  left: 0;
+  z-index: -1;
   width: 100%;
 }
 
@@ -153,7 +142,7 @@ header {
   padding: 6vw 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 4vw;
+  gap: 4vw;
   align-items: center;
 }
 
@@ -166,16 +155,20 @@ header {
 .div-project-img {
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 2vw;
+  gap: 10px;
 }
 
 .project-img {
   width: 100%;
 }
 
-/* Mobile —————————————————————————————— */
+/* Media Queries —————————————————————————————— */
 
 @media screen and (max-width: 640px) {
+  header {
+    padding: 6vw 4vw;
+  }
+
   .icon-nav-show {
     display: inline-block;
     cursor: pointer;
@@ -183,6 +176,44 @@ header {
 
   .nav-desktop {
     display: none;
+  }
+
+  .nav-mobile {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 6vw 4vw;
+    display: grid;
+    grid-template-columns: 1fr 30px;
+    grid-template-rows: auto 1fr;
+    justify-items: center;
+    align-items: center;
+    background-color: #fff;
+  }
+
+  .nav-mobile .title {
+    justify-self: start;
+  }
+
+  .nav-mobile ul {
+    grid-column: 1 / span 2;
+  }
+
+  .nav-mobile li {
+    text-align: center;
+    list-style-type: none;
+  }
+
+  .nav-mobile li a {
+    font-size: 50px;
+    line-height: 2em;
+  }
+
+  .icon-nav-hide {
+    cursor: pointer;
   }
 
   .div-thumbnail-grid {
@@ -210,5 +241,11 @@ header {
   .div-project-info {
     padding-bottom: 8vw;
     grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  header {
+    padding: 2.5vw 4vw;
   }
 }

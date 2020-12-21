@@ -13,18 +13,14 @@ const Header = () => {
   const nodeRef = React.useRef(null);
 
   const showNavMobile = () => {
-    if (!navMobile) {
-      setClickedHideNav(false);
-      setNavMobile(true);
-      document.body.style.overflow = 'hidden';
-    }
+    setClickedHideNav(false);
+    setNavMobile(true);
+    document.body.style.overflow = 'hidden';
   };
 
   const hideNavMobile = () => {
-    if (navMobile) {
-      setNavMobile(false);
-      document.body.style.overflow = null;
-    }
+    setNavMobile(false);
+    document.body.style.overflow = null;
   };
 
   const handleClickHideNav = () => {
@@ -32,13 +28,17 @@ const Header = () => {
     hideNavMobile();
   };
 
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 640) {
+      hideNavMobile();
+    }
+  });
+
   return (
     <header>
-      <p className="title">
-        <Link to="/" onClick={hideNavMobile}>
-          Alan Avery
-        </Link>
-      </p>
+      <Link className="title capsizedText" to="/">
+        Alan Avery
+      </Link>
       <img
         className="icon-nav-show"
         src={iconNavShow}

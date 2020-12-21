@@ -5,6 +5,9 @@ import iconNavHide from '../img/icon-nav-hide-black.png';
 const NavMobile = (props) => {
   return (
     <nav ref={props.nodeRef} className="nav-mobile">
+      <Link className="title capsizedText" to="/" onClick={props.hideNavMobile}>
+        Alan Avery
+      </Link>
       <img
         className="icon-nav-hide"
         src={iconNavHide}

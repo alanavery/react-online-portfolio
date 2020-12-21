@@ -68,9 +68,7 @@ const App = () => {
       <div>
         <Header />
         <main>
-          <div className="div-container">
-            <Route exact path="/" render={() => <Home work={work} />} />
-          </div>
+          <Route exact path="/" render={() => <Home work={work} />} />
           <Route
             path="/work/:id"
             render={(routeProps) => {
