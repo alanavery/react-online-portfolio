@@ -9,16 +9,16 @@ const NavMobile = (props) => {
         className="icon-nav-hide"
         src={iconNavHide}
         alt="Hide navigation"
-        onClick={props.handleHideNav}
+        onClick={props.handleClickHideNav}
       />
       <ul>
         <li>
-          <Link to="/" onClick={props.toggleNavMobile}>
+          <Link to="/" onClick={props.hideNavMobile}>
             Work
           </Link>
         </li>
         <li>
-          <Link to="/about" onClick={props.toggleNavMobile}>
+          <Link to="/about" onClick={props.hideNavMobile}>
             About
           </Link>
         </li>

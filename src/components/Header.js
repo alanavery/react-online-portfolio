@@ -12,26 +12,30 @@ const Header = () => {
 
   const nodeRef = React.useRef(null);
 
-  const toggleNavMobile = () => {
+  const showNavMobile = () => {
     if (!navMobile) {
       setClickedHideNav(false);
       setNavMobile(true);
       document.body.style.overflow = 'hidden';
-    } else {
+    }
+  };
+
+  const hideNavMobile = () => {
+    if (navMobile) {
       setNavMobile(false);
       document.body.style.overflow = null;
     }
   };
 
-  const handleHideNav = () => {
+  const handleClickHideNav = () => {
     setClickedHideNav(true);
-    toggleNavMobile();
+    hideNavMobile();
   };
 
   return (
     <header>
       <p className="title">
-        <Link to="/" onClick={toggleNavMobile}>
+        <Link to="/" onClick={hideNavMobile}>
           Alan Avery
         </Link>
       </p>
@@ -39,7 +43,7 @@ const Header = () => {
         className="icon-nav-show"
         src={iconNavShow}
         alt="Show navigation"
-        onClick={toggleNavMobile}
+        onClick={showNavMobile}
       />
       <nav className="nav-desktop">
         <ul>
@@ -61,8 +65,8 @@ const Header = () => {
         nodeRef={nodeRef}
       >
         <NavMobile
-          toggleNavMobile={toggleNavMobile}
-          handleHideNav={handleHideNav}
+          hideNavMobile={hideNavMobile}
+          handleClickHideNav={handleClickHideNav}
           nodeRef={nodeRef}
         />
       </CSSTransition>

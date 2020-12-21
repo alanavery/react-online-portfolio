@@ -1,11 +1,16 @@
+import { Link } from 'react-router-dom';
 import Thumbnail from '../components/Thumbnail';
 
-function Home(props) {
+const Home = (props) => {
   const project = props.work.map((project) => {
-    return <Thumbnail name={project.name} img={project.img} key={project.id} />;
+    return (
+      <Link to={`/work/${project.id}`} key={project.id}>
+        <Thumbnail title={project.title} img={project.heroImg} />
+      </Link>
+    );
   });
 
   return <div className="div-thumbnail-grid">{project}</div>;
-}
+};
 
 export default Home;
