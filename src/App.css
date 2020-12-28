@@ -18,7 +18,7 @@ a {
 
 .text-body {
   font-size: 18px;
-  line-height: 1.6em;
+  line-height: 2em;
 }
 
 .capsizedText {
@@ -78,7 +78,7 @@ header {
 .div-thumbnail-grid {
   padding: 0 4vw;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
 }
 

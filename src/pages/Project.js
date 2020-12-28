@@ -7,11 +7,16 @@ const Project = (props) => {
 
   return (
     <div className="div-project-page">
-      <div className="div-project-header"></div>
+      <div
+        className="div-project-header"
+        style={{ backgroundImage: `url(${props.project.heroImg})` }}
+      ></div>
       <div className="div-project-main">
         <div className="div-project-info">
           <h1 className="project-title">{props.project.title}</h1>
-          <p className="text-body">{props.project.description}</p>
+          <p className="text-body">
+            <strong>What You're Seeing:</strong> {props.project.description}
+          </p>
         </div>
         <div className="div-project-img">{projectImg}</div>
       </div>

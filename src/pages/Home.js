@@ -5,7 +5,7 @@ const Home = (props) => {
   const project = props.work.map((project) => {
     return (
       <Link to={`/work/${project.id}`} key={project.id}>
-        <Thumbnail title={project.title} img={project.heroImg} />
+        <Thumbnail title={project.title} img={project.thumbnail} />
       </Link>
     );
   });
