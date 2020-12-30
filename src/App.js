@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Project from './pages/Project';
 import About from './pages/About';
 import Header from './components/Header';
+import ScrollToTop from './components/ScrollToTop'
 
 import './App.css';
 import imgProject0101 from './img/project-fpo-01.jpg';
@@ -207,6 +208,7 @@ const App = () => {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div>
         <Header />
         <main>
@@ -214,11 +216,23 @@ const App = () => {
           <Route
             path="/work/:id"
             render={(routeProps) => {
-              console.log(routeProps);
               const project = work.find((project) => {
                 return project.id === Number(routeProps.match.params.id);
               });
-              return <Project project={project} />;
+              const projectId = Number(project.id);
+              let nextId;
+              if (projectId < work.length) {
+                nextId = projectId + 1;
+              } else {
+                nextId = 1;
+              }
+              let prevId;
+              if (projectId > 1) {
+                prevId = projectId - 1;
+              } else {
+                prevId = work.length;
+              }
+              return <Project project={project} nextId={nextId} prevId={prevId} />;
             }}
           />
           <Route path="/about" component={About} />

@@ -76,25 +76,29 @@ header {
 /* Home/Work —————————————————————————————— */
 
 .div-thumbnail-grid {
-  padding: 0 4vw;
+  padding: 0 4vw 4vw 4vw;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
 }
 
 .div-thumbnail {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   align-items: center;
   cursor: pointer;
 }
 
 .thumbnail-title {
-  position: absolute;
   z-index: 1;
+  padding: 2vw;
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
   opacity: 0;
   font-family: 'Bebas Neue', cursive;
-  font-size: 70px;
+  font-size: 5vw;
+  text-align: center;
   letter-spacing: 0.04em;
   transition-property: opacity;
   transition-duration: 0.2s;
@@ -106,6 +110,8 @@ header {
 
 .thumbnail-img {
   width: 100%;
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
   transition-property: opacity;
   transition-duration: 0.2s;
 }
@@ -160,6 +166,56 @@ header {
 
 .project-img {
   width: 100%;
+}
+
+.div-project-nav {
+  padding: 4vw 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.div-project-nav a {
+  color: gray;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 50px;
+  letter-spacing: 0.04em;
+  transition-property: color;
+  transition-duration: 0.2s;
+}
+
+.div-project-nav a:hover {
+  color: #000;
+}
+
+/* About —————————————————————————————— */
+
+.div-about-page {
+  padding: 0 4vw 4vw 4vw;
+  margin: 0 auto;
+  max-width: 1920px;
+  display: grid;
+  grid-template-columns: minmax(1fr, 300px) 3fr;
+  gap: 4vw;
+}
+
+.div-about-page img {
+  width: 100%;
+  max-width: 300px;
+  grid-column: 1 / span 1;
+}
+
+.div-about-text {
+  grid-column: 2 / span 2;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 1.6em;
+}
+
+.div-about-text p {
+  margin-top: 20px;
 }
 
 /* Media Queries —————————————————————————————— */
@@ -220,6 +276,11 @@ header {
     grid-template-columns: 1fr;
   }
 
+  .thumbnail-title {
+    padding: 6vw;
+    font-size: 15vw;
+  }
+
   .fade-enter {
     opacity: 0;
   }
@@ -241,6 +302,15 @@ header {
   .div-project-info {
     padding-bottom: 8vw;
     grid-template-columns: 1fr;
+  }
+
+  .div-about-page {
+    grid-template-columns: 1fr;
+    gap: 4vw;
+  }
+
+  .div-about-text {
+    grid-column: 1 / span 1;
   }
 }
 

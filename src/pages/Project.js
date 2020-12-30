@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Project = (props) => {
   const projectImg = props.project.img.map((img, idx) => {
     return (
@@ -19,6 +21,14 @@ const Project = (props) => {
           </p>
         </div>
         <div className="div-project-img">{projectImg}</div>
+        <div className="div-project-nav">
+          <Link className="capsizedText" to={`/work/${props.prevId}`}>
+            Previous
+          </Link>
+          <Link className="capsizedText" to={`/work/${props.nextId}`}>
+            Next
+          </Link>
+        </div>
       </div>
     </div>
   );
