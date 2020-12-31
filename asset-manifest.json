@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.826d0f5f.chunk.css",
+    "main.js": "/static/js/main.e964e41f.chunk.js",
+    "main.js.map": "/static/js/main.e964e41f.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.39810cea.js",
+    "runtime-main.js.map": "/static/js/runtime-main.39810cea.js.map",
+    "static/js/2.decb48a1.chunk.js": "/static/js/2.decb48a1.chunk.js",
+    "static/js/2.decb48a1.chunk.js.map": "/static/js/2.decb48a1.chunk.js.map",
+    "static/js/3.66bdca35.chunk.js": "/static/js/3.66bdca35.chunk.js",
+    "static/js/3.66bdca35.chunk.js.map": "/static/js/3.66bdca35.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.826d0f5f.chunk.css.map": "/static/css/main.826d0f5f.chunk.css.map",
+    "static/js/2.decb48a1.chunk.js.LICENSE.txt": "/static/js/2.decb48a1.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/static/media/project-fpo-01.8e861fd1.jpg",
+    "static/media/project-fpo-02.5a7b221d.jpg": "/static/media/project-fpo-02.5a7b221d.jpg",
+    "static/media/project-fpo-03.aa651d6b.jpg": "/static/media/project-fpo-03.aa651d6b.jpg",
+    "static/media/project-fpo-04.306e1111.jpg": "/static/media/project-fpo-04.306e1111.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.39810cea.js",
+    "static/js/2.decb48a1.chunk.js",
+    "static/css/main.826d0f5f.chunk.css",
+    "static/js/main.e964e41f.chunk.js"
+  ]
+}
