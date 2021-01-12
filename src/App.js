@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import Project from './pages/Project';
 import About from './pages/About';
 import Header from './components/Header';
-import ScrollToTop from './components/ScrollToTop'
+import ScrollToTop from './components/ScrollToTop';
 
 import './App.css';
 import imgProject0101 from './img/project-fpo-01.jpg';
@@ -16,6 +16,7 @@ const App = () => {
   const work = [
     {
       id: 1,
+      category: 'graphic design',
       title: 'LGBT Pride',
       thumbnail:
         'https://res.cloudinary.com/alanavery/image/upload/v1609008188/thumbnails/thumbnails-v02_ckh97h.jpg',
@@ -31,6 +32,7 @@ const App = () => {
     },
     {
       id: 2,
+      category: 'graphic design',
       title: `Jack's Pizza`,
       thumbnail:
         'https://res.cloudinary.com/alanavery/image/upload/v1609008189/thumbnails/thumbnails-v022_agvelx.jpg',
@@ -47,6 +49,7 @@ const App = () => {
     },
     {
       id: 3,
+      category: 'graphic design',
       title: 'Brunchfast',
       thumbnail:
         'https://res.cloudinary.com/alanavery/image/upload/v1609008189/thumbnails/thumbnails-v028_ehzaox.jpg',
@@ -63,6 +66,7 @@ const App = () => {
     },
     {
       id: 4,
+      category: 'graphic design',
       title: 'Logos',
       thumbnail:
         'https://res.cloudinary.com/alanavery/image/upload/v1609008189/thumbnails/thumbnails-v024_xeli0q.jpg',
@@ -80,6 +84,7 @@ const App = () => {
     },
     {
       id: 5,
+      category: 'graphic design',
       title: 'Climate Action Plan',
       thumbnail:
         'https://res.cloudinary.com/alanavery/image/upload/v1609008188/thumbnails/thumbnails-v025_fiigbj.jpg',
@@ -95,6 +100,7 @@ const App = () => {
     },
     {
       id: 6,
+      category: 'graphic design',
       title: 'Packaging Refresh',
       thumbnail:
         'https://res.cloudinary.com/alanavery/image/upload/v1609008189/thumbnails/thumbnails-v026_rrnzxp.jpg',
@@ -112,6 +118,7 @@ const App = () => {
     },
     {
       id: 7,
+      category: 'graphic design',
       title: 'Little Saigon',
       thumbnail:
         'https://res.cloudinary.com/alanavery/image/upload/v1609008189/thumbnails/thumbnails-v027_l9ijbr.jpg',
@@ -129,6 +136,7 @@ const App = () => {
     },
     {
       id: 8,
+      category: 'graphic design',
       title: `St. Patrick's Day`,
       thumbnail:
         'https://res.cloudinary.com/alanavery/image/upload/v1609008189/thumbnails/thumbnails-v023_upgvgr.jpg',
@@ -144,6 +152,7 @@ const App = () => {
     },
     {
       id: 9,
+      category: 'graphic design',
       title: 'Burgers & Bevs',
       thumbnail:
         'https://res.cloudinary.com/alanavery/image/upload/v1609008189/thumbnails/thumbnails-v029_qbatxu.jpg',
@@ -160,6 +169,7 @@ const App = () => {
     },
     {
       id: 10,
+      category: 'graphic design',
       title: 'Athenos Feta',
       thumbnail:
         'https://res.cloudinary.com/alanavery/image/upload/v1609008189/thumbnails/thumbnails-v0210_ygntzd.jpg',
@@ -176,6 +186,7 @@ const App = () => {
     },
     {
       id: 11,
+      category: 'graphic design',
       title: 'Summer Recipes',
       thumbnail:
         'https://res.cloudinary.com/alanavery/image/upload/v1609008189/thumbnails/thumbnails-v0211_xyfkqq.jpg',
@@ -191,6 +202,7 @@ const App = () => {
     },
     {
       id: 12,
+      category: 'graphic design',
       title: 'Crosstown Classic',
       thumbnail:
         'https://res.cloudinary.com/alanavery/image/upload/v1609008189/thumbnails/thumbnails-v0212_udzpmz.jpg',
@@ -203,6 +215,39 @@ const App = () => {
         'https://res.cloudinary.com/alanavery/image/upload/v1609167754/crosstown-classic/crosstown-classic-v025_eoethd.jpg'
       ],
       description: `Promotional materials for the annual game between the Chicago White Sox and the Chicago Cubs. The client lacked the rights to use either team's logo, so copy, color and simple graphic elements were used to illustrate the rivalry between the two teams and their respective fan bases.`
+    },
+    {
+      id: 13,
+      category: 'web development',
+      title: 'Kaleidoscope',
+      thumbnail:
+        'https://res.cloudinary.com/alanavery/image/upload/v1610487579/thumbnails/Custom_Size_1_qrjuwy.jpg',
+      url: 'https://kaleidoscope-budget.herokuapp.com/',
+      heroImg: '',
+      img: [],
+      description: ''
+    },
+    {
+      id: 14,
+      category: 'web development',
+      title: 'Trip Planner',
+      thumbnail:
+        'https://res.cloudinary.com/alanavery/image/upload/v1610487579/thumbnails/Custom_Size_2_fyc0xu.jpg',
+      url: 'https://trip-planner-aa.herokuapp.com/',
+      heroImg: '',
+      img: [],
+      description: ''
+    },
+    {
+      id: 15,
+      category: 'web development',
+      title: 'Guess Who?',
+      thumbnail:
+        'https://res.cloudinary.com/alanavery/image/upload/v1610487579/thumbnails/Custom_Size_3_qnidsl.jpg',
+      url: 'https://alanravery.com/guess-who/',
+      heroImg: '',
+      img: [],
+      description: ''
     }
   ];
 
