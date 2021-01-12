@@ -11,9 +11,9 @@ const Home = (props) => {
       );
     } else if (project.category === 'web development') {
       return (
-        <Link to={project.url} key={project.id}>
+        <a href={project.url} key={project.id} target="_return">
           <Thumbnail title={project.title} img={project.thumbnail} />
-        </Link>
+        </a>
       );
     }
   });

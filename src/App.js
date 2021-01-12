@@ -7,15 +7,44 @@ import Header from './components/Header';
 import ScrollToTop from './components/ScrollToTop';
 
 import './App.css';
-import imgProject0101 from './img/project-fpo-01.jpg';
-import imgProject0102 from './img/project-fpo-02.jpg';
-import imgProject0103 from './img/project-fpo-03.jpg';
-import imgProject0104 from './img/project-fpo-04.jpg';
 
 const App = () => {
   const work = [
     {
       id: 1,
+      category: 'web development',
+      title: 'Kaleidoscope',
+      thumbnail:
+        'https://res.cloudinary.com/alanavery/image/upload/v1610487579/thumbnails/Custom_Size_1_qrjuwy.jpg',
+      url: 'https://kaleidoscope-budget.herokuapp.com/',
+      heroImg: '',
+      img: [],
+      description: ''
+    },
+    {
+      id: 2,
+      category: 'web development',
+      title: 'Trip Planner',
+      thumbnail:
+        'https://res.cloudinary.com/alanavery/image/upload/v1610487579/thumbnails/Custom_Size_2_fyc0xu.jpg',
+      url: 'https://trip-planner-aa.herokuapp.com/',
+      heroImg: '',
+      img: [],
+      description: ''
+    },
+    {
+      id: 3,
+      category: 'web development',
+      title: 'Guess Who?',
+      thumbnail:
+        'https://res.cloudinary.com/alanavery/image/upload/v1610487579/thumbnails/Custom_Size_3_qnidsl.jpg',
+      url: 'https://alanravery.com/guess-who/',
+      heroImg: '',
+      img: [],
+      description: ''
+    },
+    {
+      id: 4,
       category: 'graphic design',
       title: 'LGBT Pride',
       thumbnail:
@@ -31,7 +60,7 @@ const App = () => {
       description: `A Miller Lite campaign targeted exclusively towards the LGBT community in Chicago. I chose to forgo rainbows and typical symbols of LGBT life, in favor of something unexpected and unique to the city: the names of gay neighborhoods and the streets that make them up.`
     },
     {
-      id: 2,
+      id: 5,
       category: 'graphic design',
       title: `Jack's Pizza`,
       thumbnail:
@@ -48,7 +77,7 @@ const App = () => {
       description: `A complete visual rebranding of Jack's Pizza, including style guide. The weathered wood background is a nod to Jack's history as a Midwestern company, and it makes for a flexible design element when creating creative extensions.`
     },
     {
-      id: 3,
+      id: 6,
       category: 'graphic design',
       title: 'Brunchfast',
       thumbnail:
@@ -65,7 +94,7 @@ const App = () => {
       description: `A variety of in-restaurant marketing materials featuring the sub-brand, Brunchfast. The trick in developing this brand-within-a-brand was creating a visual identity that felt elevated and reminiscent of brunch, but that still felt believable as a QSR (quick service restaurant) promotion.`
     },
     {
-      id: 4,
+      id: 7,
       category: 'graphic design',
       title: 'Logos',
       thumbnail:
@@ -83,7 +112,7 @@ const App = () => {
       description: `A random collection of logos created for various clients over the years. While each is a little different in style, I aim to create logos that are as concise as possible, yet full of character.`
     },
     {
-      id: 5,
+      id: 8,
       category: 'graphic design',
       title: 'Climate Action Plan',
       thumbnail:
@@ -99,7 +128,7 @@ const App = () => {
       description: `A book outlining the County of San Diego's climate action plan in 2012. The book, which is loaded with tables and infographics, was intended to be read by the general public, so I focused on creating a document that would be visually compelling and easy to digest.`
     },
     {
-      id: 6,
+      id: 9,
       category: 'graphic design',
       title: 'Packaging Refresh',
       thumbnail:
@@ -117,7 +146,7 @@ const App = () => {
       description: `A creative overhaul of Jack in the Box's packaging suite. The previous packaging had been predominantly red, but I chose to go a more neutral route, with the intent of creating packaging that would allow its contents to be the star of the show — especially when being photographed for social media.`
     },
     {
-      id: 7,
+      id: 10,
       category: 'graphic design',
       title: 'Little Saigon',
       thumbnail:
@@ -135,7 +164,7 @@ const App = () => {
       description: `A book outlining the future redevelopment of the Little Saigon neighborhood in San Diego. My goal in designing the document was to clearly communicate the facts of the redevelopment, while conveying the spirit and energy of the neighborhood.`
     },
     {
-      id: 8,
+      id: 11,
       category: 'graphic design',
       title: `St. Patrick's Day`,
       thumbnail:
@@ -151,7 +180,7 @@ const App = () => {
       description: `A St. Patrick's Day themed Miller Lite campaign, designed specifically for Chicago. The Chi-rish shield was the symbol for the entire campaign, and it was so well-received by Chicagoans that MillerCoors ran the same campaign several years in a row.`
     },
     {
-      id: 9,
+      id: 12,
       category: 'graphic design',
       title: 'Burgers & Bevs',
       thumbnail:
@@ -168,7 +197,7 @@ const App = () => {
       description: `A collection of window clings promoting various burgers and beverages. In the QSR (quick service restaurant) world, the windows of a restaurant are prime real estate, and the creative on those windows needs to tell a product's story quickly and effectively.`
     },
     {
-      id: 10,
+      id: 13,
       category: 'graphic design',
       title: 'Athenos Feta',
       thumbnail:
@@ -185,7 +214,7 @@ const App = () => {
       description: `One of the first marketing campaigns for Athenos Feta. The salad fork image was central to the campaign, because it helped tell the story of a healthier cheese option while also providing the perfect stage to feature the product. The colors, typefaces and other design elements were inspired by the recently-refreshed packaging.`
     },
     {
-      id: 11,
+      id: 14,
       category: 'graphic design',
       title: 'Summer Recipes',
       thumbnail:
@@ -201,7 +230,7 @@ const App = () => {
       description: `A seasonal recipe book featuring Kraft products. It was distributed at Target stores nation-wide, and as a result, had to abide by both companies' brand guidelines. Fortunately, the two brands paired well together.`
     },
     {
-      id: 12,
+      id: 15,
       category: 'graphic design',
       title: 'Crosstown Classic',
       thumbnail:
@@ -215,39 +244,6 @@ const App = () => {
         'https://res.cloudinary.com/alanavery/image/upload/v1609167754/crosstown-classic/crosstown-classic-v025_eoethd.jpg'
       ],
       description: `Promotional materials for the annual game between the Chicago White Sox and the Chicago Cubs. The client lacked the rights to use either team's logo, so copy, color and simple graphic elements were used to illustrate the rivalry between the two teams and their respective fan bases.`
-    },
-    {
-      id: 13,
-      category: 'web development',
-      title: 'Kaleidoscope',
-      thumbnail:
-        'https://res.cloudinary.com/alanavery/image/upload/v1610487579/thumbnails/Custom_Size_1_qrjuwy.jpg',
-      url: 'https://kaleidoscope-budget.herokuapp.com/',
-      heroImg: '',
-      img: [],
-      description: ''
-    },
-    {
-      id: 14,
-      category: 'web development',
-      title: 'Trip Planner',
-      thumbnail:
-        'https://res.cloudinary.com/alanavery/image/upload/v1610487579/thumbnails/Custom_Size_2_fyc0xu.jpg',
-      url: 'https://trip-planner-aa.herokuapp.com/',
-      heroImg: '',
-      img: [],
-      description: ''
-    },
-    {
-      id: 15,
-      category: 'web development',
-      title: 'Guess Who?',
-      thumbnail:
-        'https://res.cloudinary.com/alanavery/image/upload/v1610487579/thumbnails/Custom_Size_3_qnidsl.jpg',
-      url: 'https://alanravery.com/guess-who/',
-      heroImg: '',
-      img: [],
-      description: ''
     }
   ];
 
