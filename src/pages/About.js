@@ -1,3 +1,5 @@
+import resume from '../documents/Alan_Avery_Resume.pdf';
+
 const About = () => {
   return (
     <div className="div-about-page">
@@ -35,7 +37,11 @@ const About = () => {
           fact, consider giving them all a bottle of their favorite whiskey.
         </p>
         <p>(Seven) It’s okay to use the f-word.</p>
-        <p><a>Click here for my resume.</a></p>
+        <p className="resume">
+          <a href={resume} target="_return">
+            Click here for my resume.
+          </a>
+        </p>
       </div>
     </div>
   );

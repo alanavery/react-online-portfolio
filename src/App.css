@@ -218,6 +218,10 @@ h2 {
   margin-top: 20px;
 }
 
+.resume {
+  font-weight: 600;
+}
+
 /* Media Queries —————————————————————————————— */
 
 @media screen and (max-width: 640px) {
